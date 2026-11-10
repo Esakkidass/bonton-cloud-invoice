@@ -1,0 +1,696 @@
+/* Root Reset & Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+}
+
+body {
+  background-color: #eef2f6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+.invoice-app-wrapper {
+  padding: 30px 16px 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Floating Toolbar */
+.toolbar-container {
+  width: 960px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.toolbar-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-badge {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.toolbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f5f9;
+}
+
+.btn-active {
+  background-color: #e0f2fe;
+  border-color: #7dd3fc;
+  color: #0369a1;
+}
+
+/* Main Invoice Paper Sheet */
+.invoice-sheet {
+  width: 960px;
+  max-width: 100%;
+  background: #ffffff;
+  padding: 44px 50px 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+/* 1. Header Section */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bonton-main-logo {
+  height: 54px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.sample-badge-box {
+  background: #eaf0f6;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.sample-badge-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #1e293b;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.sample-badge-sub {
+  font-size: 11.5px;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* 2. Title & Meta Row */
+.title-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 24px;
+  padding-bottom: 20px;
+}
+
+.title-col h1 {
+  font-size: 33px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.8px;
+  margin-bottom: 6px;
+}
+
+.title-categories {
+  font-size: 13.5px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.title-categories .cat-pipe {
+  color: #94a3b8;
+  margin: 0 7px;
+  font-style: normal;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 105px 12px auto;
+  row-gap: 5px;
+  font-size: 13.5px;
+  color: #1e293b;
+}
+
+.meta-label {
+  font-weight: 500;
+  color: #334155;
+}
+
+.meta-colon {
+  text-align: center;
+  color: #64748b;
+}
+
+.meta-val {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.meta-input {
+  border: 1px solid #cbd5e1;
+  padding: 2px 6px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+/* Divider Line */
+.invoice-hr {
+  border: none;
+  height: 1px;
+  background-color: #cbd5e1;
+  margin: 0 0 22px 0;
+}
+
+/* 3. Bill To */
+.info-section {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 26px;
+}
+
+.bill-to-col {
+  max-width: 480px;
+  width: 100%;
+}
+
+.bill-to-col h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.client-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.client-address {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #334155;
+  margin-bottom: 14px;
+  white-space: pre-line;
+}
+
+.client-contact-details {
+  display: grid;
+  grid-template-columns: 105px 12px auto;
+  row-gap: 5px;
+  font-size: 13.5px;
+}
+
+.client-contact-details .c-label {
+  color: #334155;
+  font-weight: 500;
+}
+
+.client-contact-details .c-colon {
+  color: #64748b;
+  text-align: center;
+}
+
+.client-contact-details .c-val {
+  color: #0f172a;
+}
+
+.client-contact-details .c-val.bold {
+  font-weight: 700;
+}
+
+/* Account Summary Card */
+.account-summary-card {
+  background-color: #edf4fa;
+  border-radius: 6px;
+  padding: 20px 24px;
+}
+
+.account-summary-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.account-details-grid {
+  display: grid;
+  grid-template-columns: 120px 12px auto;
+  row-gap: 9px;
+  font-size: 13.5px;
+  align-items: center;
+}
+
+.acc-label {
+  color: #334155;
+  font-weight: 500;
+}
+
+.acc-colon {
+  color: #64748b;
+  text-align: center;
+}
+
+.acc-val {
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.paid-badge {
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 600;
+  font-size: 12.5px;
+  padding: 3px 14px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #a7f3d0;
+}
+
+/* 4. Service Usage Details Table */
+.table-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.services-table th {
+  background-color: #dbe8f4;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 9px 12px;
+  text-align: left;
+}
+
+.services-table th.col-service {
+  width: 22%;
+}
+
+.services-table th.col-desc {
+  width: 30%;
+}
+
+.services-table th.col-usage {
+  width: 18%;
+}
+
+.services-table th.col-price {
+  width: 15%;
+  text-align: right;
+}
+
+.services-table th.col-amount {
+  width: 15%;
+  text-align: right;
+  padding-right: 14px;
+}
+
+.services-table th.col-action {
+  width: 36px;
+  text-align: center;
+}
+
+.services-table td {
+  padding: 8.5px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.services-table td.text-right {
+  text-align: right;
+}
+
+.services-table td.col-amount {
+  font-weight: 500;
+  padding-right: 14px;
+}
+
+.services-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.editable-cell input {
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1e293b;
+  background: transparent;
+}
+
+.editable-cell input:focus {
+  border-color: #93c5fd;
+  background: #ffffff;
+  outline: none;
+}
+
+.row-delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.row-delete-btn:hover {
+  background: #fee2e2;
+}
+
+/* 5. Bottom Section: Billing Summary */
+.bottom-columns {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+/* Billing Summary Box */
+.billing-summary-card {
+  width: 400px;
+  max-width: 100%;
+  background-color: #edf4fa;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.billing-header {
+  padding: 16px 22px 10px;
+}
+
+.billing-header h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.billing-rows {
+  padding: 4px 22px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.summary-line .sum-label {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.summary-line .sum-val {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.summary-line.discount .sum-val {
+  color: #0f172a;
+}
+
+.total-amount-box {
+  background-color: #d8e8f6;
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-amount-label {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.total-amount-value {
+  font-size: 25px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* 6. Footer Notes & Need Help */
+.footer-section {
+  border-top: 1px solid #cbd5e1;
+  padding-top: 18px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 28px;
+}
+
+.notes-col h4,
+.help-col h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.notes-list {
+  padding-left: 18px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.notes-list li {
+  margin-bottom: 2px;
+}
+
+.notes-list li strong {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.help-col {
+  border-left: 1px solid #e2e8f0;
+  padding-left: 28px;
+}
+
+.help-text {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.help-text a,
+.help-text span.email-link {
+  color: #1e293b;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Screen Only Responsive styles (do NOT apply to print) */
+@media screen and (max-width: 860px) {
+  .invoice-sheet {
+    padding: 24px 20px;
+  }
+
+  .header-row,
+  .title-meta-row,
+  .info-section,
+  .footer-section {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bottom-columns {
+    justify-content: stretch;
+  }
+
+  .billing-summary-card {
+    width: 100%;
+  }
+
+  .help-col {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 14px;
+  }
+
+  .services-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Print Stylesheet for exact 1:1 PDF Output */
+@page {
+  size: A4 portrait;
+  margin: 8mm 10mm;
+}
+
+@media print {
+
+  html,
+  body {
+    background: #ffffff !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .invoice-app-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    background: transparent !important;
+  }
+
+  .toolbar-container {
+    display: none !important;
+  }
+
+  /* Keep the exact on-screen design (960px sheet, same paddings),
+     scaled down so it fits the A4 printable width (190mm ≈ 718px). */
+  .invoice-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: 960px !important;
+    max-width: none !important;
+    padding: 44px 50px 40px !important;
+    margin: 0 !important;
+    zoom: 0.74;
+  }
+
+  .info-section {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin-bottom: 24px !important;
+  }
+
+  .footer-section {
+    display: grid !important;
+    grid-template-columns: 1.3fr 0.9fr !important;
+    gap: 28px !important;
+  }
+
+  .bottom-columns {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+
+  .billing-summary-card {
+    width: 400px !important;
+    max-width: 100% !important;
+  }
+
+  .services-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+
+  /* Prevent awkward page breaks */
+  .header-row,
+  .title-meta-row,
+  .info-section,
+  .table-section,
+  .bottom-columns,
+  .footer-section,
+  .account-summary-card,
+  .billing-summary-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Force exact background colors and text colors in PDF engines */
+  .sample-badge-box,
+  .paid-badge,
+  .stair-col,
+  .account-summary-card,
+  .billing-summary-card,
+  .total-amount-box,
+  th {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
